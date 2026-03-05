@@ -11,9 +11,9 @@ interface KineticMarqueeProps {
 }
 
 export const KineticMarquee = memo(function KineticMarquee({
-  text = "CREATIVE DEVELOPER — PARIS — BASED — DESIGN — ",
+  text = "CREATIVE EDITOR — BASED IN INDIA — DESIGN — EDIT — ",
   className,
-  baseVelocity = 0.5,
+  baseVelocity = 1.2,
   skewFactor = 0.5,
 }: KineticMarqueeProps) {
   const containerRef = useRef<HTMLDivElement>(null);

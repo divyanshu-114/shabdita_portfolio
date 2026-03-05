@@ -47,12 +47,13 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
 
-  const [revealCount, setRevealCount] = useState<number>(0);
+  // Initialize with actual text chars so SSR and initial client render match (no random values)
+  const [revealCount, setRevealCount] = useState<number>(text ? text.length : 0);
   const animationFrameRef = useRef<number | null>(null);
   const startTimeRef = useRef<number>(0);
   const lastFlipTimeRef = useRef<number>(0);
   const scrambleCharsRef = useRef<string[]>(
-    text ? generateGibberishPreservingSpaces(text, charset).split("") : []
+    text ? text.split("") : []
   );
 
   useEffect(() => {
@@ -126,8 +127,8 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
         const displayChar = isRevealed
           ? char
           : char === " "
-          ? " "
-          : scrambleCharsRef.current[index] ??
+            ? " "
+            : scrambleCharsRef.current[index] ??
             generateRandomCharacter(charset);
 
         return (

@@ -28,8 +28,8 @@ export default function Home() {
         {/* Kinetic Marquee - Breaking the grid */}
         <div className="relative -my-8 md:-my-12 z-0">
           <KineticMarquee 
-            text="CREATIVE DEVELOPER — BASED IN PARIS — DESIGN — CODE — "
-            baseVelocity={0.5}
+            text="CREATIVE EDITOR — BASED - IN - INDIA  — EDITING — MOTION - GRAPHICS"
+            baseVelocity={1.5}
             skewFactor={0.8}
           />
         </div>

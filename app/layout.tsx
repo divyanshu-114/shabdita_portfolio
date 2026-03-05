@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import { NoiseOverlay } from "@/components/noise-overlay";
 import { CustomCursor } from "@/components/custom-cursor";
@@ -12,6 +12,23 @@ const harmond = Playfair_Display({
   variable: "--font-harmond",
   display: "swap",
   preload: true,
+});
+
+// Playfair Display - for name accent
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+// Great Vibes - cursive script for name display
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-greatvibes",
+  display: "swap",
 });
 
 // Nohemi - Body font (fallback: Inter)
@@ -59,17 +76,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${harmond.variable} ${nohemi.variable} dark`}
+      className={`${harmond.variable} ${nohemi.variable} ${playfair.variable} ${greatVibes.variable} dark`}
       suppressHydrationWarning
     >
       <body className="bg-black text-white font-nohemi antialiased overflow-x-hidden">
         <LenisProvider>
           {/* Noise overlay - Film grain effect */}
           <NoiseOverlay />
-          
+
           {/* Custom cursor - Desktop only */}
           <CustomCursor />
-          
+
           {/* Main content */}
           <main>{children}</main>
         </LenisProvider>
