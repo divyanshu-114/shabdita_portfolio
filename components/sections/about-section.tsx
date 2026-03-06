@@ -149,8 +149,8 @@ export function AboutSection() {
           <div className="col-span-4 md:col-span-6 lg:col-span-9">
             {/* Split heading: Meet + Shabdita in Playfair Display */}
             <h2 className="font-harmond text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-8">
-              Meet{" "}
-              <span className="font-greatvibes" style={{ fontSize: "1.15em", fontWeight: 400 }}>
+              <span className="opacity-60">Meet</span>{" "}
+              <span className="font-greatvibes opacity-100" style={{ fontSize: "1.15em", fontWeight: 400 }}>
                 Shabdita
               </span>
             </h2>
@@ -158,7 +158,7 @@ export function AboutSection() {
             {/* Bio paragraphs */}
             <div className="space-y-6 font-nohemi text-lg md:text-xl leading-relaxed text-white/60 max-w-3xl">
               <p>
-                I&apos;m a visual story teller and a video editor{" "}
+                A visual story teller and a video editor{" "}
                 <GlowText className="text-white">
                   driven by creativity and detail
                 </GlowText>{" "}
@@ -213,7 +213,7 @@ export function AboutSection() {
                     <div
                       key={i}
                       className={cn(
-                        "mx-6 flex flex-col items-center gap-3 px-6 py-5",
+                        "mx-11 flex flex-col items-center gap-3 px-6 py-5",
                         "rounded-2xl border border-white/10 bg-white/5",
                         "hover:border-white/25 hover:bg-white/8",
                         "transition-colors duration-300 cursor-default min-w-[110px]"

@@ -71,7 +71,7 @@ const DottedGlowBackground = memo(function DottedGlowBackground({ className }: {
         raf = 0;
         return;
       }
-      
+
       const { width, height } = container.getBoundingClientRect();
       ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = "#3b82f6";
@@ -164,7 +164,7 @@ export function FooterSection() {
         <div className="flex flex-col items-center justify-center text-center w-full">
           {/* Section label */}
           <span className="font-nohemi text-xs font-medium uppercase tracking-[0.3em] text-white/40 mb-8">
-            Let&apos;s Connect
+            Available for Work
           </span>
 
           {/* Big CTA headline - Massive Harmond Typography */}
@@ -180,14 +180,13 @@ export function FooterSection() {
 
           {/* Subtext */}
           <p className="font-nohemi text-lg md:text-xl text-white/50 max-w-lg mb-12">
-            Have a project in mind? Let&apos;s create something extraordinary
-            together.
+            Your story deserves more than just visuals. Let's bring your vision to life through motion
           </p>
 
           {/* CTA Button with Magnetic Effect */}
           <MagneticButton
             as="a"
-            href="mailto:dev.sufyaan@gmail.com"
+            href="mailto:shabdita018@gmail.com"
             strength={0.4}
             className="group"
           >
@@ -207,23 +206,20 @@ export function FooterSection() {
 
           {/* Email flip */}
           <div className="mt-12">
-            <FlippingEmail email="dev.sufyaan@gmail.com" />
+            <FlippingEmail email="shabdita018@gmail.com" />
           </div>
 
-          {/* Social links with magnetic effect */}
+          {/* Social links */}
           <div className="mt-16 flex items-center gap-6 flex-wrap justify-center">
-            {["Twitter", "GitHub", "LinkedIn", "Dribbble"].map((social) => (
-              <MagneticButton
-                key={social}
-                as="a"
-                href="#"
-                strength={0.5}
-              >
-                <span className="font-nohemi text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors duration-200 px-2 py-1">
-                  {social}
-                </span>
-              </MagneticButton>
-            ))}
+            <a
+              href="https://linkedin.com/in/shabdita-7975672a6/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-nohemi text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors duration-200 px-2 py-1"
+              data-cursor-hover
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
@@ -233,10 +229,7 @@ export function FooterSection() {
         <div className="swiss-container">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
             <p className="font-nohemi text-xs text-white/40">
-              © {new Date().getFullYear()} Sufyaan. All rights reserved.
-            </p>
-            <p className="font-nohemi text-xs text-white/40">
-              GitHub: dev-sufyaan | Designed & Built with ♥ and lots of ☕
+              © {new Date().getFullYear()} Divyanshu Raj. All rights reserved.
             </p>
           </div>
         </div>
