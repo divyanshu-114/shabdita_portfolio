@@ -25,16 +25,16 @@ export const FloatingNav = ({
   // Smooth scroll to section using Lenis
   const scrollToSection = useCallback((e: React.MouseEvent, href: string) => {
     e.preventDefault();
-    
+
     if (href === "#") {
       // Scroll to top
       lenis?.scrollTo(0, { duration: 1.2 });
       return;
     }
-    
+
     const targetId = href.replace("#", "");
     const targetElement = document.getElementById(targetId);
-    
+
     if (targetElement && lenis) {
       lenis.scrollTo(targetElement, {
         offset: -100, // Offset for fixed navbar
@@ -46,7 +46,7 @@ export const FloatingNav = ({
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Check if at top
       if (currentScrollY < 50) {
         setVisible(true);
@@ -56,14 +56,14 @@ export const FloatingNav = ({
       }
 
       setScrolled(true);
-      
+
       // Show/hide based on scroll direction
       if (currentScrollY < lastScrollY.current) {
         setVisible(true); // Scrolling up
       } else {
         setVisible(false); // Scrolling down
       }
-      
+
       lastScrollY.current = currentScrollY;
     };
 
@@ -99,7 +99,7 @@ export const FloatingNav = ({
           strength={0.3}
         >
           <span className="px-4 py-2 font-harmond text-lg font-bold tracking-tight text-white">
-            K.
+            S.
           </span>
         </MagneticButton>
 
