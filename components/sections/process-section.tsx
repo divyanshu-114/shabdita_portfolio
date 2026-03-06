@@ -18,7 +18,7 @@ export function ProcessSection() {
             goals, audience, and requirements to craft a strategic foundation
             that ensures success.
           </p>
-          <ul className="space-y-2 font-nohemi text-sm text-white/50">
+          {/* <ul className="space-y-2 font-nohemi text-sm text-white/50">
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
               Research & Analysis
@@ -31,7 +31,7 @@ export function ProcessSection() {
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
               User Journey Mapping
             </li>
-          </ul>
+          </ul> */}
         </div>
       ),
     },
@@ -41,14 +41,13 @@ export function ProcessSection() {
       content: (
         <div className="space-y-4">
           <h4 className="font-harmond text-2xl md:text-3xl font-bold text-white">
-            Crafting the Experience
+            Crafting the Story through Motion
           </h4>
           <p className="font-nohemi text-base text-white/60 max-w-lg">
-            Using Swiss design principles and modern aesthetics, I create
-            wireframes and high-fidelity designs that balance beauty with
-            functionality.
+            Combining rhythm, motion graphics and visual storytelling to transform 
+            raw footage into engaging and memorable experiences.         
           </p>
-          <ul className="space-y-2 font-nohemi text-sm text-white/50">
+          {/* <ul className="space-y-2 font-nohemi text-sm text-white/50">
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
               Wireframing & Prototyping
@@ -61,7 +60,7 @@ export function ProcessSection() {
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
               Motion Design
             </li>
-          </ul>
+          </ul> */}
         </div>
       ),
     },
@@ -71,14 +70,13 @@ export function ProcessSection() {
       content: (
         <div className="space-y-4">
           <h4 className="font-harmond text-2xl md:text-3xl font-bold text-white">
-            Building with Precision
+            Building storieswith Precision
           </h4>
           <p className="font-nohemi text-base text-white/60 max-w-lg">
-            Clean, performant code is the backbone of every project. I use
-            modern frameworks and best practices to build experiences that are
-            fast, accessible, and scalable.
+            Great editing is the backbone of every powerful video. Every frame matters and I use
+            cinematic pacing seamless transitions to craft videos that are engaging and visually compelling.
           </p>
-          <ul className="space-y-2 font-nohemi text-sm text-white/50">
+          {/* <ul className="space-y-2 font-nohemi text-sm text-white/50">
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
               React & Next.js Development
@@ -91,7 +89,7 @@ export function ProcessSection() {
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
               Performance Optimization
             </li>
-          </ul>
+          </ul> */}
         </div>
       ),
     },
@@ -101,14 +99,14 @@ export function ProcessSection() {
       content: (
         <div className="space-y-4">
           <h4 className="font-harmond text-2xl md:text-3xl font-bold text-white">
-            Delivering Excellence
+            Delivering Visual Motion
           </h4>
           <p className="font-nohemi text-base text-white/60 max-w-lg">
             A successful launch is just the beginning. I ensure smooth
-            deployment, comprehensive testing, and ongoing support to keep your
-            project running flawlessly.
+            editing, comprehensive design and ongoing support to keep your
+            videos flawless.
           </p>
-          <ul className="space-y-2 font-nohemi text-sm text-white/50">
+          {/* <ul className="space-y-2 font-nohemi text-sm text-white/50">
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
               Quality Assurance
@@ -121,7 +119,7 @@ export function ProcessSection() {
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
               Ongoing Maintenance
             </li>
-          </ul>
+          </ul> */}
         </div>
       ),
     },

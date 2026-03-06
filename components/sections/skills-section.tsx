@@ -4,12 +4,12 @@ import React, { memo } from "react";
 import { cn } from "@/lib/utils";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import {
-  IconCode,
-  IconPalette,
-  IconDeviceLaptop,
-  IconRocket,
-  IconBrandThreejs,
-  IconApiApp,
+  IconVideo,
+  IconPlayerPlay,
+  IconColorPicker,
+  IconHeadphones,
+  IconTimeline,
+  IconSparkles,
 } from "@tabler/icons-react";
 
 interface SkillCardProps {
@@ -38,7 +38,7 @@ const SkillCard = memo(function SkillCard({
           inactiveZone={0.01}
           borderWidth={2}
         />
-        
+
         <div
           className={cn(
             "relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-8",
@@ -71,44 +71,45 @@ export function SkillsSection() {
   const skills = [
     {
       area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
-      icon: <IconCode className="h-6 w-6 text-accent-blue" />,
-      title: "Frontend Development",
+      icon: <IconVideo className="h-6 w-6 text-accent-blue" />,
+      title: "Video Editing",
       description:
-        "Building performant, accessible web applications with React, Next.js, and TypeScript.",
+        "Crafting compelling narratives through precise cuts, seamless transitions and cinematic pacing in Premiere Pro and DaVinci Resolve.",
     },
     {
       area: "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]",
-      icon: <IconPalette className="h-6 w-6 text-accent-blue" />,
-      title: "UI/UX Design",
+      icon: <IconPlayerPlay className="h-6 w-6 text-accent-blue" />,
+      title: "Motion Graphics",
       description:
-        "Creating intuitive interfaces with a focus on user experience and modern aesthetics.",
+        "Designing dynamic animated visuals, title sequences and kinetic typography using After Effects and Illustrator.",
     },
     {
       area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]",
-      icon: <IconBrandThreejs className="h-6 w-6 text-accent-blue" />,
-      title: "3D & WebGL",
+      icon: <IconColorPicker className="h-6 w-6 text-accent-blue" />,
+      title: "Color Grading",
       description:
-        "Crafting immersive 3D experiences with Three.js, React Three Fiber, and custom shaders.",
+        "Establishing mood, tone and visual consistency through professional color correction and grading in DaVinci Resolve.",
     },
     {
       area: "md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]",
-      icon: <IconDeviceLaptop className="h-6 w-6 text-accent-blue" />,
-      title: "Responsive Design",
+      icon: <IconHeadphones className="h-6 w-6 text-accent-blue" />,
+      title: "Sound Design",
       description:
-        "Ensuring flawless experiences across all devices and screen sizes.",
+        "Syncing music, layering SFX and mixing audio to elevate emotion and drive the rhythm of every edit.",
     },
     {
       area: "md:[grid-area:3/1/4/7] xl:[grid-area:2/8/3/10]",
-      icon: <IconRocket className="h-6 w-6 text-accent-blue" />,
-      title: "Performance",
-      description: "Optimizing for 60fps animations and sub-second load times.",
+      icon: <IconTimeline className="h-6 w-6 text-accent-blue" />,
+      title: "Storytelling & Pacing",
+      description:
+        "Shaping raw footage into memories",
     },
     {
       area: "md:[grid-area:3/7/4/13] xl:[grid-area:2/10/3/13]",
-      icon: <IconApiApp className="h-6 w-6 text-accent-blue" />,
-      title: "API Integration",
+      icon: <IconSparkles className="h-6 w-6 text-accent-blue" />,
+      title: "Thumbnail & Graphic Design",
       description:
-        "Seamless integration with REST APIs, GraphQL, and third-party services.",
+        "Designing eye-catching thumbnails and graphics in Photoshop and Illustrator",
     },
   ];
 
@@ -128,8 +129,8 @@ export function SkillsSection() {
               Skills & Services
             </h2>
             <p className="font-nohemi text-lg text-white/50 max-w-xl">
-              A comprehensive skill set refined through years of building
-              digital products for startups and enterprises alike.
+              A comprehensive skill set refined through building multiple
+              projects
             </p>
           </div>
         </div>
