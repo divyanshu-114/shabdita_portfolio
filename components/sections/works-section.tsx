@@ -21,6 +21,11 @@ const shortFormVideos = [
     title: "Short Film #3",
     label: "Short Form · Visual",
   },
+  {
+    id: "LVT107Kq_8U",
+    title: "Short Film #4",
+    label: "Short Form · Color",
+  },
 ];
 
 const longFormVideos = [
@@ -70,7 +75,8 @@ function ShortCard({ video }: { video: (typeof shortFormVideos)[0] }) {
         <iframe
           src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1`}
           title={video.title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
           className="absolute inset-0 w-full h-full"
           style={{ border: "none" }}
@@ -208,7 +214,7 @@ export function WorksSection() {
 
         {/* ── Short Form ── */}
         <SubSectionHeader tag="Short Form Content" title="Reels & Shorts" />
-        <div className="max-w-0.2xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-24 md:mb-32">
+        <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 mb-24 md:mb-32">
           {shortFormVideos.map((video) => (
             <ShortCard key={video.id} video={video} />
           ))}
