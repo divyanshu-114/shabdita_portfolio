@@ -41,23 +41,22 @@ const nohemi = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Creative Developer | Digital Noir Portfolio",
+  title: "Shabdita Portfolio",
   description:
-    "Award-winning creative developer specializing in interactive digital experiences, high-end UI, and 3D web development.",
+    "Explore Shabdita's projects, skills, and creative work.",
   keywords: [
-    "Creative Developer",
-    "Web Developer",
-    "UI/UX",
-    "Three.js",
-    "React",
-    "Next.js",
+    "Shabdita",
+    "Video Editor",
+    "Illustrator",
+    "Adobe After Effects",
+    "Adobe Photoshop",
     "Portfolio",
   ],
-  authors: [{ name: "Creative Developer" }],
+  authors: [{ name: "Shabdita" }],
   openGraph: {
-    title: "Creative Developer | Digital Noir Portfolio",
+    title: "Motion Graphic Designer",
     description:
-      "Award-winning creative developer specializing in interactive digital experiences.",
+      "Portfolio for showcasing my skills and projects ",
     type: "website",
   },
 };
