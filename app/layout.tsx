@@ -41,7 +41,7 @@ const nohemi = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Shabdita Portfolio",
+  title: "Shabdita's Portfolio",
   description:
     "Explore Shabdita's projects, skills, and creative work.",
   keywords: [

@@ -26,6 +26,11 @@ const shortFormVideos = [
     title: "Short Film #4",
     label: "Short Form · Color",
   },
+  {
+    id: "caQKqWN0ybQ",
+    title: "Short Film #5",
+    label: "Short Form · Edit",
+  },
 ];
 
 const longFormVideos = [
@@ -214,10 +219,15 @@ export function WorksSection() {
 
         {/* ── Short Form ── */}
         <SubSectionHeader tag="Short Form Content" title="Reels & Shorts" />
-        <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 mb-24 md:mb-32">
-          {shortFormVideos.map((video) => (
+        <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {shortFormVideos.slice(0, 4).map((video) => (
             <ShortCard key={video.id} video={video} />
           ))}
+        </div>
+        <div className="max-w-2xl mx-auto flex justify-center mt-6 mb-24 md:mb-32">
+          <div className="w-full sm:w-[calc(50%-12px)]">
+            <ShortCard video={shortFormVideos[4]} />
+          </div>
         </div>
 
         {/* Separator */}
