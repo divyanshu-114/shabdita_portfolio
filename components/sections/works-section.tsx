@@ -7,28 +7,33 @@ import { cn } from "@/lib/utils";
 
 const shortFormVideos = [
   {
-    id: "0c3j-08vStM",
+    id: "WA7p66UtUrE",
     title: "Short Film #1",
+    label: "Short Form · Edit",
+  },
+  {
+    id: "0c3j-08vStM",
+    title: "Short Film #2",
     label: "Short Form · Motion",
   },
   {
-    id: "WA7p66UtUrE",
-    title: "Short Film #2",
+    id: "ARQ-AkEFDSk",
+    title: "Short Film #3",
     label: "Short Form · Edit",
   },
   {
     id: "W5kFz7-PNug",
-    title: "Short Film #3",
+    title: "Short Film #4",
     label: "Short Form · Visual",
   },
   {
     id: "LVT107Kq_8U",
-    title: "Short Film #4",
+    title: "Short Film #5",
     label: "Short Form · Color",
   },
   {
     id: "caQKqWN0ybQ",
-    title: "Short Film #5",
+    title: "Short Film #6",
     label: "Short Form · Edit",
   },
 ];
@@ -219,13 +224,8 @@ export function WorksSection() {
 
         {/* ── Short Form ── */}
         <SubSectionHeader tag="Short Form Content" title="Reels & Shorts" />
-        <div className="max-w-2xl mx-auto flex justify-center mb-6">
-          <div className="w-full sm:w-[calc(50%-12px)]">
-            <ShortCard video={shortFormVideos[4]} />
-          </div>
-        </div>
         <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 mb-24 md:mb-32">
-          {shortFormVideos.slice(0, 4).map((video) => (
+          {shortFormVideos.map((video) => (
             <ShortCard key={video.id} video={video} />
           ))}
         </div>
