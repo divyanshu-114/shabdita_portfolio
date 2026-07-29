@@ -40,18 +40,23 @@ const shortFormVideos = [
 
 const longFormVideos = [
   {
-    id: "Sf6Qy7afCe8",
+    id: "9jBidHT8HtM",
     title: "Long Form Edit #1",
+    label: "Cinematic",
+  },
+  {
+    id: "Sf6Qy7afCe8",
+    title: "Long Form Edit #2",
     label: "Podcast Hook",
   },
   {
     id: "2McD_T1yc8s",
-    title: "Long Form Edit #2",
+    title: "Long Form Edit #3",
     label: "Infotainment",
   },
   {
     id: "KlOA-jZupWk",
-    title: "Long Form Edit #3",
+    title: "Long Form Edit #4",
     label: "Documentary",
   },
 ];
@@ -60,6 +65,10 @@ const longFormVideos = [
 
 function ShortCard({ video }: { video: (typeof shortFormVideos)[0] }) {
   const [hovered, setHovered] = useState(false);
+  // Once clicked, the video is considered "activated" — stays colorful
+  const [activated, setActivated] = useState(false);
+
+  const isColorful = hovered || activated;
 
   return (
     <div
@@ -73,11 +82,11 @@ function ShortCard({ video }: { video: (typeof shortFormVideos)[0] }) {
         className={cn(
           "relative overflow-hidden rounded-2xl border border-white/10 bg-white/5",
           "transition-all duration-500",
-          hovered ? "border-white/30 shadow-[0_0_40px_rgba(255,255,255,0.06)]" : ""
+          isColorful ? "border-white/30 shadow-[0_0_40px_rgba(255,255,255,0.06)]" : ""
         )}
         style={{
           aspectRatio: "9/16",
-          filter: hovered ? "grayscale(0)" : "grayscale(1)",
+          filter: isColorful ? "grayscale(0)" : "grayscale(1)",
           transform: hovered ? "scale(1.08)" : "scale(1)",
           transition: "filter 0.5s ease, transform 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease",
         }}
@@ -91,6 +100,13 @@ function ShortCard({ video }: { video: (typeof shortFormVideos)[0] }) {
           className="absolute inset-0 w-full h-full"
           style={{ border: "none" }}
         />
+        {/* Transparent click-intercept overlay — disappears on first click, turning card colorful */}
+        {!activated && (
+          <div
+            className="absolute inset-0 z-10 cursor-pointer"
+            onClick={() => setActivated(true)}
+          />
+        )}
       </div>
 
       {/* Label */}
@@ -118,6 +134,10 @@ function ShortCard({ video }: { video: (typeof shortFormVideos)[0] }) {
 
 function LongCard({ video }: { video: (typeof longFormVideos)[0] }) {
   const [hovered, setHovered] = useState(false);
+  // Once clicked, the video is considered "activated" — stays colorful
+  const [activated, setActivated] = useState(false);
+
+  const isColorful = hovered || activated;
 
   return (
     <div
@@ -149,11 +169,11 @@ function LongCard({ video }: { video: (typeof longFormVideos)[0] }) {
         className={cn(
           "relative overflow-hidden rounded-2xl border border-white/10 bg-white/5",
           "transition-all duration-500",
-          hovered ? "border-white/30 shadow-[0_0_40px_rgba(255,255,255,0.06)]" : ""
+          isColorful ? "border-white/30 shadow-[0_0_40px_rgba(255,255,255,0.06)]" : ""
         )}
         style={{
           aspectRatio: "16/9",
-          filter: hovered ? "grayscale(0)" : "grayscale(1)",
+          filter: isColorful ? "grayscale(0)" : "grayscale(1)",
           transform: hovered ? "scale(1.08)" : "scale(1)",
           transition: "filter 0.5s ease, transform 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease",
         }}
@@ -166,6 +186,13 @@ function LongCard({ video }: { video: (typeof longFormVideos)[0] }) {
           className="absolute inset-0 w-full h-full"
           style={{ border: "none" }}
         />
+        {/* Transparent click-intercept overlay — disappears on first click, turning card colorful */}
+        {!activated && (
+          <div
+            className="absolute inset-0 z-10 cursor-pointer"
+            onClick={() => setActivated(true)}
+          />
+        )}
       </div>
     </div>
   );
