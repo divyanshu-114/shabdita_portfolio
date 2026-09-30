@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 const shortFormVideos = [
   {
-    id: "eqkxUTKML0I",
+    id: "jpZmL-75yvU",
     label: "Motion Graphics",
   },
   {
