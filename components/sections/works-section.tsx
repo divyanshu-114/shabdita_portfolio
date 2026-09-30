@@ -7,56 +7,58 @@ import { cn } from "@/lib/utils";
 
 const shortFormVideos = [
   {
+    id: "eqkxUTKML0I",
+    label: "Motion Graphics",
+  },
+  {
+    id: "Pk9uM3N0lZI",
+    label: "Hook",
+  },
+  {
     id: "LVT107Kq_8U",
-    title: "Short Film #1",
-    label: "Short Form · Edit",
+    label: "Edit",
   },
   {
     id: "caQKqWN0ybQ",
-    title: "Short Film #2",
-    label: "Short Form · Motion",
+    label: "Motion",
   },
   {
     id: "WA7p66UtUrE",
-    title: "Short Film #3",
-    label: "Short Form · Edit",
+    label: "Edit",
   },
   {
     id: "0c3j-08vStM",
-    title: "Short Film #4",
-    label: "Short Form · Visual",
+    label: "Visual",
   },
   {
     id: "Psom1a1cpzI",
-    title: "Short Film #5",
-    label: "Short Form · Color",
+    label: "Color",
   },
   {
     id: "W5kFz7-PNug",
-    title: "Short Film #6",
-    label: "Short Form · Edit",
+    label: "Edit",
   },
 ];
 
 const longFormVideos = [
   {
+    id: "MBsOlp-jpXc",
+    label: "Motion",
+  },
+  {
     id: "9jBidHT8HtM",
-    title: "Long Form Edit #1",
     label: "Cinematic",
   },
   {
     id: "Sf6Qy7afCe8",
-    title: "Long Form Edit #2",
     label: "Podcast Hook",
   },
   {
     id: "2McD_T1yc8s",
-    title: "Long Form Edit #3",
     label: "Infotainment",
   },
   {
     id: "KlOA-jZupWk",
-    title: "Long Form Edit #4",
     label: "Documentary",
   },
 ];
@@ -93,7 +95,7 @@ function ShortCard({ video }: { video: (typeof shortFormVideos)[0] }) {
       >
         <iframe
           src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1`}
-          title={video.title}
+          title={video.label}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
@@ -180,7 +182,7 @@ function LongCard({ video }: { video: (typeof longFormVideos)[0] }) {
       >
         <iframe
           src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1`}
-          title={video.title}
+          title={video.label}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           className="absolute inset-0 w-full h-full"
