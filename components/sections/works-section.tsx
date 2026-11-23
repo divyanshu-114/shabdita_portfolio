@@ -35,7 +35,7 @@ const shortFormVideos = [
     label: "Color",
   },
   {
-    id: "W5kFz7-PNug",
+    id: "fBgJxLQryXE",
     label: "Edit",
   },
 ];
@@ -54,11 +54,11 @@ const longFormVideos = [
     label: "Podcast Hook",
   },
   {
-    id: "2McD_T1yc8s",
+    id: "HUzLnW2F6ng",
     label: "Infotainment",
   },
   {
-    id: "8piO-UMMbL4",
+    id: "ai42nZBtAxQ",
     label: "Documentary",
   },
 ];
