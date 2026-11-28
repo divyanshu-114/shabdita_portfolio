@@ -100,9 +100,9 @@ export function SkillsSection() {
     {
       area: "md:[grid-area:3/1/4/7] xl:[grid-area:2/8/3/10]",
       icon: <IconTimeline className="h-6 w-6 text-accent-blue" />,
-      title: "Storytelling & Pacing",
+      title: "AI-Driven Editing",
       description:
-        "Shaping raw footage into memories",
+        "Where Creativity Meets Technology",
     },
     {
       area: "md:[grid-area:3/7/4/13] xl:[grid-area:2/10/3/13]",

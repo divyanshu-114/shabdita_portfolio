@@ -212,7 +212,7 @@ export function FooterSection() {
           {/* Social links */}
           <div className="mt-16 flex items-center gap-6 flex-wrap justify-center">
             <a
-              href="https://linkedin.com/in/shabdita-7975672a6/"
+              href="https://www.linkedin.com/in/sha-bdita-7975672a6/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-nohemi text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors duration-200 px-2 py-1"
